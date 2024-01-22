@@ -27,7 +27,7 @@ public class HouseService {
 
     public List<House> listHouses(String country) {
     if (country != null) {
-        return houseRepository.findAllByCountry(country);
+        return houseRepository.findAllByCountryIgnoreCase(country);
     }
      return houseRepository.findAll();
     }

@@ -14,7 +14,7 @@
 <b>City: </b>${house.city}<br>
 <b>Description: </b>${house.description}<br>
 <b>Restrictions: </b>${house.restrictions}<br>
-<b>Author: </b><a href="/user/${house.user.id}">${house.user.name}<br>
+
 
 
 </body>

@@ -27,9 +27,9 @@ public class SecurityConfig{
     protected SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/registration", "/login", "/user/**", "/house/**", "/images/**").permitAll()
-//                        .requestMatchers("") // пока не нужно
-//                        .hasAnyAuthority("ROLE_ADMIN","ROLE_USER")
+                        .requestMatchers("/registration", "/login", " " , "/").permitAll()
+                        .requestMatchers("/user/**", "/house/**", "/images/**") // записала их сюда из строки выше, без регистрации не зайти сюда
+                        .hasAnyAuthority("ROLE_ADMIN","ROLE_USER")
                         .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form

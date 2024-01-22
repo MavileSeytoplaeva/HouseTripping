@@ -22,7 +22,7 @@ import java.security.Principal;
 public class HouseTrippingController {
     private final HouseService houseService;
 
-    @GetMapping("/")
+    @GetMapping("")
     public String HouseTripping(@RequestParam(name = "country", required = false) String country, Principal principal, Model model) {
         model.addAttribute("houses", houseService.listHouses(country));
         model.addAttribute("user", houseService.getUserByPrincipal(principal));
